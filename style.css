@@ -69,15 +69,7 @@ h2 {
 h3 {
   font-size: clamp(22px, 3vw, 32px);
 }
-.eyebrow {
-  font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--gold-deep);
-  margin: 0 0 22px;
-}
+
 .lead {
   font-size: clamp(17px, 2.2vw, 21px);
   color: var(--ink-soft);
@@ -196,57 +188,55 @@ image-slot {
   background-size: cover;
   padding: 72px 24px 90px;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.logo-image {
+  max-width: clamp(60px, 15vw, 100px);
+  height: auto;
+}
+
+.logo-text {
+  max-width: clamp(90px, 18vw, 175px);
+  height: auto;
+}
+
 .hero-grid {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 60px;
+  gap: 30px;
   align-items: center;
 }
 .hero-brand {
   font-family: var(--serif);
   font-size: 19px;
   letter-spacing: 0.06em;
-  color: var(--ink);
+  color: white;
   margin-bottom: 38px;
   font-weight: 600;
 }
 .hero h1 {
   margin-bottom: 24px;
   color: #fff;
+  font-weight: 600;
 }
 .hero .lead {
-  margin-bottom: 14px;
+  margin-bottom: 22px;
+  color: #f2eee2;
+  font-size: 22px;
 }
 .hero-sub {
-  font-size: 15px;
-  color: var(--muted);
+  font-size: 20px;
+  color: #f2eee2;
   margin-bottom: 32px;
-}
-.hero-checks {
-  list-style: none;
-  padding: 0;
-  margin: 34px 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 22px;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-  font-weight: 500;
-}
-.hero-checks li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.hero-checks li::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gold);
 }
 
 /* checks list (generic) */
@@ -523,7 +513,7 @@ image-slot {
   padding-left: 30px;
   margin-bottom: 16px;
   font-size: 15px;
-  color: var(--ink-soft);
+  color: var(--cream);
 }
 .offer-list li::before {
   content: "✻";
