@@ -49,6 +49,12 @@ img {
 .center {
   text-align: center;
 }
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border: none;
+  margin: 0;
+}
 
 /* type */
 h1,
