@@ -193,7 +193,7 @@ image-slot {
 
 /* ---- HERO ---- */
 .hero {
-  background: url("assets/header.png") no-repeat;
+  background: url("assets/header-teste.png") no-repeat;
   background-size: cover;
   padding: 72px 24px 90px;
 }
