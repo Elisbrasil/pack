@@ -138,15 +138,18 @@ p:last-child {
   color: var(--cream);
 }
 
-/* image slots */
 image-slot {
   width: 100%;
 }
+
+/*#solucao {
+  min-height: 400px;
+}*/
 .slot-hero {
   aspect-ratio: 4/5;
 }
 .slot-wide {
-  aspect-ratio: 16/10;
+  aspect-ratio: 1/1;
 }
 .slot-sq {
   aspect-ratio: 1/1;
@@ -325,43 +328,6 @@ image-slot {
   line-height: 1.5;
 }
 
-/* gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-.gallery image-slot {
-  aspect-ratio: 4/5;
-}
-@media (max-width: 860px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* formats */
-.formats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  margin: 36px 0 0;
-}
-.fmt {
-  font-family: var(--serif);
-  font-size: 24px;
-  color: var(--cream);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  padding: 14px 30px;
-  border-radius: 2px;
-}
-.fmt span {
-  color: var(--gold);
-  font-style: italic;
-  margin-right: 6px;
-}
-
 /* bonus */
 .bonus-row {
   display: grid;
@@ -411,32 +377,6 @@ image-slot {
 }
 @media (max-width: 760px) {
   .testi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* niches */
-.niche-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 14px;
-}
-.niche-card image-slot {
-  aspect-ratio: 3/4;
-}
-.niche-card p {
-  font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink);
-  margin: 16px 0 0;
-  text-align: center;
-}
-@media (max-width: 760px) {
-  .niche-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -563,27 +503,6 @@ image-slot {
   color: var(--muted);
   line-height: 1.9;
   margin: 0;
-}
-
-/* author */
-.author-grid {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 56px;
-  align-items: center;
-}
-.author-grid image-slot {
-  aspect-ratio: 4/5;
-}
-.author-txt .eyebrow {
-  margin-bottom: 8px;
-}
-.author-txt h2 {
-  margin-bottom: 24px;
-}
-.author-txt p {
-  color: var(--ink-soft);
-  font-size: 16.5px;
 }
 
 /* faq */
