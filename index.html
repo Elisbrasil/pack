@@ -13,7 +13,6 @@
 
 <body>
 
-  <!-- ============ HERO ============ -->
   <header class="hero" data-screen-label="Hero">
     <div class="hero-grid">
       <div class="hero-copy">
@@ -29,17 +28,21 @@
   </header>
 
   <section class="section bg-cream" data-screen-label="O que você leva">
-    <div class="narrow center">
-      <h2>O que você leva no Kit Modelos Prontos</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="narrow" style="margin-top:44px;">
-      <ul class="ck">
-        <li>Mais de <b>100 templates prontos</b> para feed e stories — 100% editáveis no Canva</li>
-        <li><b>4 identidades visuais diferentes:</b> Basic, Elegante, Criativo e Clean — você escolhe a que combina com a sua marca</li>
-        <li>Mais de <b>300 ideias de conteúdo</b> organizadas por objetivo — atrair, engajar, vender e fidelizar</li>
-        <li><b>Acesso imediato</b> após a compra — vitalício, sem mensalidade</li>
-      </ul>
+    <div class="inner" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
+      <div>
+        <h2>O que você leva no Kit Modelos Prontos:</h2>
+        <div class="rule rule-left"></div>
+        <ul class="ck" style="margin-top:28px;">
+          <li>Mais de <b>100 templates prontos</b> para feed e stories, 100% editáveis no Canva</li>
+          <li><b>4 identidades visuais diferentes:</b> Basic, Elegante, Criativo e Clean — você escolhe a que combina com a sua marca</li>
+          <li>Mais de <b>300 ideias de conteúdo</b> organizadas por objetivo, atrair, engajar, vender e fidelizar</li>
+          <li><b>Acesso imediato</b> após a compra, vitalício, sem mensalidade</li>
+        </ul>
+      </div>
+
+      <image-slot id="voce-vai-receber" class="slot-tall" shape="rounded" radius="4">
+        <img src="assets/pack.png" alt="Templates que você vai receber" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </image-slot>
     </div>
   </section>
 
@@ -65,7 +68,6 @@
     </div>
   </section>
 
-  <!-- ============ PRA VOCÊ SE ============ -->
   <section class="section bg-cream" data-screen-label="Pra você se">
     <div class="narrow center">
       <h2>Esse Kit de Modelos de Posts foi feito pra você se:</h2>

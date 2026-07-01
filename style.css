@@ -157,6 +157,9 @@ image-slot {
 .slot-tall {
   aspect-ratio: 4/5;
 }
+.slot-16-9 {
+  aspect-ratio: 16/9;
+}
 
 /* backgrounds */
 .bg-cream {
