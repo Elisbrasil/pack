@@ -46,11 +46,56 @@
     </div>
   </section>
 
-  <section class="section" data-screen-label="Dor">
-    <div class="narrow prob">
-      <p>Você sabe que precisa postar. Sabe que o Instagram é onde a paciente decide se vai marcar com você ou com <span class="em">a clínica do lado.</span></p>
-      <p>Mas seu feed virou um catálogo de antes e depois. Foto de seringa. Boca pós-preenchimento. Repete, repete, repete — e nada de paciente nova entrando.</p>
-      <p>Aí você pensa: <span class="em">“tenho que postar algo diferente hoje”.</span> Abre o Canva, trava. O que falar? Como falar sem parecer aulinha técnica? Vai engajar? E passa 40 minutos montando um post que não sai como queria — ou simplesmente não posta nada.</p>
+  <section class="section carousel-section" data-screen-label="Carrossel">
+    <div class="carousel" id="carousel-templates">
+      <button class="carousel-arrow carousel-arrow--prev" aria-label="Anterior">‹</button>
+
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <image-slot id="carrossel-01" shape="rect">
+            <img src="assets/1.png" alt="Descrição do post 1" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </image-slot>
+        </div>
+        <div class="carousel-slide">
+          <image-slot id="carrossel-02" shape="rect">
+            <img src="assets/2.png" alt="Descrição do post 2" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </image-slot>
+        </div>
+        <div class="carousel-slide">
+          <image-slot id="carrossel-03" shape="rect">
+            <img src="assets/3.png" alt="Descrição do post 3" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </image-slot>
+        </div>
+        <div class="carousel-slide">
+          <image-slot id="carrossel-04" shape="rect">
+            <img src="assets/4.png" alt="Descrição do post 4" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </image-slot>
+        </div>
+        <div class="carousel-slide">
+          <image-slot id="carrossel-05" shape="rect">
+            <img src="assets/5.png" alt="Descrição do post 5" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </image-slot>
+        </div>
+        <div class="carousel-slide">
+          <image-slot id="carrossel-06" shape="rect">
+            <img src="assets/6.png" alt="Descrição do post 6" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </image-slot>
+        </div>
+        <div class="carousel-slide">
+          <image-slot id="carrossel-07" shape="rect">
+            <img src="assets/7.png" alt="Descrição do post 7" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </image-slot>
+        </div>
+        <div class="carousel-slide">
+          <image-slot id="carrossel-08" shape="rect">
+            <img src="assets/8.png" alt="Descrição do post 8" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </image-slot>
+        </div>
+      </div>
+
+      <button class="carousel-arrow carousel-arrow--next" aria-label="Próximo">›</button>
+
+      <div class="carousel-dots"></div>
     </div>
   </section>
 
@@ -95,7 +140,6 @@
     </div>
   </section>
 
-  <!-- ============ O PRODUTO / 4 ESTILOS ============ -->
   <section class="section bg-paper2" data-screen-label="O produto">
     <div class="narrow center">
       <h2>O que está dentro do Kit</h2>
@@ -137,7 +181,6 @@
     </div>
   </section>
 
-  <!-- ============ BÔNUS ============ -->
   <section class="section bg-cream" data-screen-label="Bônus">
     <div class="narrow center">
       <h2>E ainda vai junto com o seu kit</h2>
@@ -163,25 +206,7 @@
     </div>
   </section>
 
-  <!-- ============ DEPOIMENTOS ============ -->
-  <section class="section" data-screen-label="Depoimentos">
-    <div class="narrow center">
-      <h2>Quem já usa, aprova</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="inner" style="margin-top:40px;">
-      <div class="testi-grid">
-        <image-slot id="depo-1" shape="rounded" radius="4" placeholder="Print de depoimento"></image-slot>
-        <image-slot id="depo-2" shape="rounded" radius="4" placeholder="Print de depoimento"></image-slot>
-        <image-slot id="depo-3" shape="rounded" radius="4" placeholder="Print de depoimento"></image-slot>
-        <image-slot id="depo-4" shape="rounded" radius="4" placeholder="Print de depoimento"></image-slot>
-        <image-slot id="depo-5" shape="rounded" radius="4" placeholder="Print de depoimento"></image-slot>
-        <image-slot id="depo-6" shape="rounded" radius="4" placeholder="Print de depoimento"></image-slot>
-      </div>
-    </div>
-  </section>
   <hr class="divider" />
-  <!-- ============ RECAPITULANDO ============ -->
   <section class="section" data-screen-label="Recapitulando">
     <div class="narrow center">
       <h2>Veja tudo que você leva</h2>
@@ -218,7 +243,6 @@
     </div>
   </section>
 
-  <!-- ============ OFERTA / CTA ============ -->
   <section class="section bg-espresso" id="oferta" data-screen-label="Oferta">
     <div class="inner" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
       <div>
@@ -248,7 +272,6 @@
     </div>
   </section>
 
-  <!-- ============ FAQ ============ -->
   <section class="section" data-screen-label="FAQ">
     <div class="narrow center">
       <h2>Perguntas frequentes</h2>
@@ -279,7 +302,7 @@
     <p>Pack de Posts da HOF · A escola de negócios da Beauty Economy</p>
   </footer>
 
-  <script src="image-slot.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

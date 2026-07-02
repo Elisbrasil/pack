@@ -288,6 +288,94 @@ image-slot {
   font-weight: 600;
 }
 
+.carousel-section {
+  padding: 0px;
+}
+.carousel {
+  position: relative;
+  max-width: none;
+  margin: 0 auto;
+}
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0;
+  height: 763px;
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-slide {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+.carousel-slide image-slot {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 0px;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line-dark);
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-arrow--prev {
+  left: 12px;
+}
+.carousel-arrow--next {
+  right: 12px;
+}
+.carousel-arrow:hover {
+  background: var(--espresso);
+  color: var(--cream);
+  border-color: var(--espresso);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 32px;
+}
+.carousel-dots .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--line-dark);
+  cursor: pointer;
+}
+.carousel-dots .dot.active {
+  background: var(--gold);
+}
+
+@media (max-width: 560px) {
+  .carousel-track {
+    padding: 32px 20px;
+  }
+  .carousel-arrow {
+    display: none;
+  }
+}
+
 /* problem block */
 .prob p {
   font-size: clamp(19px, 2.6vw, 26px);
@@ -366,22 +454,6 @@ image-slot {
 }
 .bonus-row image-slot {
   aspect-ratio: 4/3;
-}
-
-/* testimonials */
-.testi-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 14px;
-}
-.testi-grid image-slot {
-  aspect-ratio: 4/5;
-}
-@media (max-width: 760px) {
-  .testi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* recap table */
@@ -508,7 +580,6 @@ image-slot {
   margin: 0;
 }
 
-/* faq */
 .faq-list {
   max-width: 760px;
   margin: 14px auto 0;
@@ -550,7 +621,6 @@ details.faq .ans {
   line-height: 1.7;
 }
 
-/* footer */
 footer {
   background: var(--espresso);
   color: #bdb1a2;
@@ -569,7 +639,6 @@ footer p {
   margin: 0;
 }
 
-/* responsive */
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
