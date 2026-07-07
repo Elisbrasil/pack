@@ -194,6 +194,30 @@ image-slot {
   margin: 26px 0;
 }
 
+#oferta {
+  position: relative;
+  background: var(--espresso) url("assets/headerteste.png") center/cover
+    no-repeat;
+}
+
+#oferta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(
+    26,
+    5,
+    6,
+    0.82
+  ); /* overlay escuro pra manter contraste do texto */
+  z-index: 0;
+}
+
+#oferta .inner {
+  position: relative;
+  z-index: 1;
+}
+
 /* ---- HERO ---- */
 .hero {
   background: url("assets/header-teste.png") no-repeat;
