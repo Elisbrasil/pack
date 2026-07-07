@@ -199,26 +199,21 @@ image-slot {
 
 #oferta {
   position: relative;
-  background: var(--espresso) url("assets/headerteste.png") center/cover
-    no-repeat;
+  overflow: hidden;
+  background: url("assets/header-teste.png") center/cover no-repeat;
 }
 
 #oferta::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(
-    26,
-    5,
-    6,
-    0.52
-  ); /* overlay escuro pra manter contraste do texto */
-  z-index: 0;
+  background: rgba(20, 10, 10, 0.35);
+  z-index: 1;
 }
 
 #oferta .inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 #bonus-1 img {
   width: 80%;
@@ -230,9 +225,24 @@ image-slot {
 
 /* ---- HERO ---- */
 .hero {
-  background: url("assets/header-teste.png") no-repeat;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  background: url("assets/header-teste.png") center/cover no-repeat;
   padding: 72px 24px 90px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 10, 10, 0.35);
+  z-index: 1;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
