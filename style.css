@@ -217,6 +217,13 @@ image-slot {
   position: relative;
   z-index: 1;
 }
+#bonus-1 img {
+  width: 70%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
 
 /* ---- HERO ---- */
 .hero {
