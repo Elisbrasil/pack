@@ -197,7 +197,7 @@ image-slot {
 #oferta {
   position: relative;
   overflow: hidden;
-  background: url("assets/header-teste.png") center/cover no-repeat;
+  background: url("assets/header-teste.webp") center/cover no-repeat;
 }
 
 #oferta::before {
@@ -225,7 +225,7 @@ image-slot {
   position: relative;
   overflow: hidden;
 
-  background: url("assets/header-teste.png") center/cover no-repeat;
+  background: url("assets/header-teste.webp") center/cover no-repeat;
   padding: 72px 24px 90px;
 }
 
