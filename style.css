@@ -142,9 +142,6 @@ image-slot {
   width: 100%;
 }
 
-/*#solucao {
-  min-height: 400px;
-}*/
 .slot-hero {
   aspect-ratio: 4/5;
 }
@@ -541,6 +538,19 @@ image-slot {
   line-height: 1.8;
 }
 
+/* testimonials */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+@media (max-width: 760px) {
+  .testi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* recap table */
 .recap-tbl {
   width: 100%;
@@ -618,7 +628,7 @@ image-slot {
   position: relative;
   padding-left: 30px;
   margin-bottom: 16px;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--cream);
 }
 .offer-list li::before {
@@ -656,6 +666,24 @@ image-slot {
 .offer-card .cta {
   margin: 26px 0 18px;
   width: 100%;
+}
+.cta--gold {
+  animation: pulse-gold 1.8s infinite;
+}
+
+@keyframes pulse-gold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6);
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(212, 175, 55, 0);
+    transform: scale(1.03);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    transform: scale(1);
+  }
 }
 .offer-trust {
   font-size: 11.5px;
