@@ -38,9 +38,20 @@ img {
 .section {
   padding: 84px 24px;
 }
+
+.section[data-screen-label="Quem somos"] {
+  padding-top: 56px;
+}
 .inner {
   max-width: 1040px;
   margin: 0 auto;
+}
+
+.inner.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 .narrow {
   max-width: 720px;
@@ -140,6 +151,14 @@ p:last-child {
 
 image-slot {
   width: 100%;
+}
+
+/* responsive images */
+.responsive-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .slot-hero {
@@ -408,12 +427,39 @@ image-slot {
   background: var(--gold);
 }
 
+@media (max-width: 768px) {
+  .carousel-track {
+    height: 450px;
+    gap: 16px;
+    padding: 24px 16px;
+  }
+
+  .carousel-slide image-slot {
+    aspect-ratio: 9/16;
+  }
+}
+
 @media (max-width: 560px) {
   .carousel-track {
-    padding: 32px 20px;
+    height: 380px;
+    padding: 20px 12px;
+    gap: 12px;
   }
+
   .carousel-arrow {
-    display: none;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .carousel-dots {
+    gap: 6px;
+    padding-bottom: 20px;
+  }
+
+  .carousel-dots .dot {
+    width: 6px;
+    height: 6px;
   }
 }
 
@@ -488,17 +534,22 @@ image-slot {
 .bonus-mockup {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 40px 0 50px;
+  width: 100%;
 }
 
 .bonus-mockup image-slot {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
 }
 
 .bonus-mockup img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: scale-down;
 }
 
 .bonus-columns {
@@ -764,6 +815,11 @@ footer p {
     gap: 42px;
   }
 
+  .inner.two-column {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
   .styles-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -773,16 +829,16 @@ footer p {
     grid-template-columns: 1fr;
     gap: 50px;
   }
-
-  .bonus-mockup image-slot {
-    width: 280px;
-  }
 }
 @media (max-width: 768px) {
   /* ---------- Layout ---------- */
 
   .section {
     padding: 60px 20px;
+  }
+
+  .section[data-screen-label="Quem somos"] {
+    padding-top: 44px;
   }
 
   .inner,
@@ -869,10 +925,6 @@ footer p {
     margin: 30px 0 40px;
   }
 
-  .bonus-mockup image-slot {
-    width: 260px;
-  }
-
   .bonus-columns {
     grid-template-columns: 1fr;
     gap: 45px;
@@ -918,6 +970,75 @@ footer p {
     max-width: 320px;
     margin: auto;
   }
+
+  /* ---------- Carrossel Tablet ---------- */
+  .carousel-track {
+    height: 450px;
+    gap: 16px;
+    padding: 24px 16px;
+  }
+
+  .carousel-slide image-slot {
+    aspect-ratio: 9/16;
+  }
+}
+
+@media (max-width: 600px) {
+  /* ---------- Grids com 2 colunas para 1 ---------- */
+
+  [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ---------- Depoimentos ---------- */
+  .testi-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* ---------- Styles Grid ---------- */
+  .styles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .style-card image-slot {
+    aspect-ratio: 1/1.2;
+  }
+
+  /* ---------- Tipografia compacta ---------- */
+  body {
+    font-size: 15px;
+  }
+
+  .ck li::before {
+    width: 18px;
+    height: 18px;
+    top: 2px;
+  }
+
+  /* ---------- Mockup Mobile ---------- */
+  .bonus-mockup {
+    margin: 16px 0 24px;
+  }
+
+  .bonus-mockup image-slot {
+    max-width: 55vw;
+  }
+
+  .bonus-mockup img {
+    object-fit: contain !important;
+  }
+
+  /* mobile responsive images */
+  .responsive-img {
+    object-fit: contain !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -954,5 +1075,228 @@ footer p {
 
   .style-card {
     max-width: 100%;
+  }
+
+  /* ---------- Carrossel Mobile ---------- */
+  .carousel-track {
+    height: 400px;
+    gap: 16px;
+    padding: 16px 12px;
+  }
+
+  .carousel-slide image-slot {
+    aspect-ratio: 9/16;
+  }
+
+  .carousel-dots {
+    padding-bottom: 20px;
+  }
+
+  /* ---------- Tabela Mobile ---------- */
+  .recap-tbl {
+    font-size: 14px;
+  }
+
+  .recap-tbl th,
+  .recap-tbl td {
+    padding: 14px 12px;
+  }
+
+  .recap-tbl td.r {
+    font-size: 16px;
+  }
+
+  .recap-note {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
+  /* ---------- FAQs Mobile ---------- */
+  details.faq summary {
+    padding: 18px 40px 18px 0;
+    font-size: 18px;
+  }
+
+  details.faq .ans {
+    padding: 0 40px 20px 0;
+  }
+
+  /* ---------- Listas Mobile ---------- */
+  .ck li {
+    padding-left: 32px;
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
+
+  .offer-list li {
+    padding-left: 24px;
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  /* ---------- Seções Mobile ---------- */
+  .section {
+    padding: 40px 16px;
+  }
+
+  .section[data-screen-label="Quem somos"] {
+    padding-top: 32px;
+  }
+
+  .hero {
+    padding: 40px 16px 50px;
+  }
+
+  /* ---------- Ofertas Mobile ---------- */
+  .offer-inner {
+    padding: 28px 18px;
+  }
+
+  .offer-from {
+    font-size: 12px;
+  }
+
+  .offer-cash {
+    font-size: 14px;
+  }
+
+  .offer-trust {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  /* ---------- Bonus Mobile ---------- */
+  .bonus-tag {
+    font-size: 11px;
+  }
+
+  .bonus-item h3 {
+    font-size: 20px;
+  }
+
+  .bonus-item p {
+    font-size: 15px;
+  }
+
+  /* ---------- Footer Mobile ---------- */
+  footer .fbrand {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  /* ---------- Imagens Mobile ---------- */
+  .slot-tall,
+  .slot-wide,
+  .slot-wide-academia {
+    aspect-ratio: 9/10;
+  }
+}
+
+@media (max-width: 480px) {
+  .bonus-mockup {
+    margin: 16px 0 20px;
+  }
+
+  .bonus-mockup image-slot {
+    max-width: 52vw;
+  }
+
+  .bonus-mockup img {
+    object-fit: contain !important;
+  }
+
+  /* mobile responsive images */
+  .responsive-img {
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 32px 12px;
+  }
+
+  .hero {
+    padding: 32px 12px 40px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .lead {
+    font-size: 15px;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+  }
+
+  .cta {
+    padding: 16px 24px;
+    font-size: 12px;
+  }
+
+  .logo-image {
+    max-width: 50px;
+  }
+
+  .logo-text {
+    max-width: 100px;
+  }
+
+  .ck li {
+    padding-left: 28px;
+    font-size: 14px;
+  }
+
+  .offer-price {
+    font-size: 32px;
+  }
+
+  .offer-price small {
+    font-size: 16px;
+  }
+
+  details.faq summary {
+    padding: 16px 36px 16px 0;
+    font-size: 16px;
+  }
+
+  details.faq .ans {
+    padding: 0 36px 16px 0;
+    font-size: 14px;
+  }
+
+  .bonus-mockup {
+    margin: 12px 0 16px;
+  }
+
+  .bonus-mockup image-slot {
+    max-width: 48vw;
+  }
+
+  .bonus-mockup img {
+    object-fit: contain !important;
+  }
+
+  /* mobile responsive images */
+  .responsive-img {
+    object-fit: contain !important;
   }
 }
